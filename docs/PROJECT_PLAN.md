@@ -47,8 +47,11 @@ The MVP should work without real STM32 hardware by using simulator-generated tel
 - `/events`
 - `/rules`
 - `/settings`
+- `/3d`
 
 The first screen after login should be the operational dashboard, not a landing page.
+
+The 3D screen should be used for device, harness, inspection rig, or sensor-layout visualization when the project needs spatial context.
 
 ## 4. High-Level Architecture
 
@@ -223,6 +226,23 @@ Remote command APIs can be added after the telemetry and dashboard flow is stabl
 - Vite
 - Realtime updates through WebSocket or Server-Sent Events
 
+### 3D Rendering
+
+- Three.js as the core 3D rendering engine
+- React Three Fiber for React integration
+- Drei for common Three.js helpers, cameras, controls, and loaders
+- GLTF/GLB as the preferred 3D model format
+- Blender for creating or editing 3D assets
+- Playwright screenshot checks for verifying that 3D scenes render correctly
+
+3D rendering should be used for practical engineering views, not decorative hero sections. Initial targets include:
+
+- Device placement visualization
+- STM32 inspection rig visualization
+- Harness or connector layout preview
+- Sensor position view
+- Realtime status overlay on 3D equipment models
+
 ### Backend
 
 - Python
@@ -273,6 +293,7 @@ The shared package can contain common API types, telemetry DTOs, constants, and 
 - Add realtime updates
 - Add recent history charts
 - Add event log generation
+- Add an initial 3D device or rig visualization screen using mock data
 
 ### Phase 3: Docker Development Environment
 

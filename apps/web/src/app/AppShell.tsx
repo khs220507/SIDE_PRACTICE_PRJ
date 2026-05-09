@@ -1,9 +1,10 @@
-import { Activity, Bell, Cpu, Gauge, Settings, ShieldCheck } from 'lucide-react';
+import { Activity, Bell, Bot, Cpu, Gauge, Settings, ShieldCheck } from 'lucide-react';
 import { NavLink, Outlet } from 'react-router-dom';
 
 const navItems = [
   { to: '/dashboard', label: 'Dashboard', icon: Gauge },
   { to: '/devices', label: 'Devices', icon: Cpu },
+  { to: '/robot', label: 'Robot', icon: Bot },
   { to: '/events', label: 'Events', icon: Bell },
   { to: '/rules', label: 'Rules', icon: ShieldCheck },
   { to: '/settings', label: 'Settings', icon: Settings }
@@ -32,4 +33,3 @@ export function AppShell() {
     </div>
   );
 }
-

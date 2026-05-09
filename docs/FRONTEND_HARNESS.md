@@ -10,6 +10,8 @@ The initial frontend must:
 - Validate fixture shapes with Zod schemas.
 - Show loading, empty, error, and success states in data-driven pages.
 - Let an operator navigate from dashboard to device list and then to a device detail page.
+- Render a Dobot CR10 `/robot` Three.js URDF canvas without ROS.
+- Verify the robot canvas is nonblank on desktop and mobile browser viewports.
 
 ## Harness Assets
 
@@ -21,7 +23,11 @@ The initial frontend must:
 - `apps/web/src/api/schemas.test.ts`
 - `apps/web/src/pages/DashboardPage.test.tsx`
 - `apps/web/src/pages/DevicesPage.test.tsx`
+- `apps/web/src/pages/RobotPage.test.tsx`
 - `apps/web/tests/e2e/navigation.spec.ts`
+- `apps/web/tests/e2e/robot.spec.ts`
+- `apps/web/public/robots/dobot_description/urdf/cr10_robot.urdf`
+- `apps/web/public/robots/dobot_description/meshes/cr10/*.STL`
 
 ## Verification Commands
 

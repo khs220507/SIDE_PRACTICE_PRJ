@@ -52,6 +52,7 @@ The frontend should consume stable API contracts and remain independent from the
 - `/devices`
 - `/devices/:id`
 - `/events`
+- `/robot`
 - `/rules`
 - `/settings`
 
@@ -126,3 +127,23 @@ Until dependencies are installed, repository-level structural verification can c
 - Replace fixture API implementation with HTTP client
 - Keep MSW as the contract harness
 - Add request/response validation through Zod
+
+### Milestone 5: Temporary Robot Digital Twin
+
+- Add a `/robot` route
+- Render the Dobot CR10 URDF with Three.js and `urdf-loader`
+- Drive joints from mock state instead of ROS
+- Verify the canvas is nonblank in Playwright
+- Replace mock joint state with ROS or backend-provided joint state later
+
+The initial CR10 model assets are stored under:
+
+```txt
+apps/web/public/robots/dobot_description/
+```
+
+The copied Dobot robot description asset license is retained at:
+
+```txt
+apps/web/public/robots/dobot_description/LICENSE
+```

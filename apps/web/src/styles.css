@@ -247,6 +247,91 @@ th {
   color: #ffffff;
 }
 
+.robot-page {
+  display: grid;
+  gap: 16px;
+  grid-template-rows: auto minmax(420px, calc(100vh - 280px)) auto;
+  min-height: calc(100vh - 56px);
+}
+
+.robot-toolbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.robot-toolbar h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.robot-toolbar p {
+  color: #63706b;
+  margin: 8px 0 0;
+}
+
+.icon-button {
+  align-items: center;
+  background: #0f766e;
+  border: 1px solid #0f766e;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  width: 42px;
+}
+
+.robot-scene {
+  background: #f5f8f7;
+  border: 1px solid #d1ddd9;
+  min-height: 420px;
+  overflow: hidden;
+  position: relative;
+}
+
+.robot-scene canvas {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.joint-panel {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d9e1de;
+  border-radius: 8px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  padding: 16px;
+}
+
+.joint-panel label {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.joint-panel span {
+  color: #52615c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.joint-panel input {
+  accent-color: #0f766e;
+  width: 100%;
+}
+
+.joint-panel output {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
 .login-page {
   align-items: center;
   display: flex;
@@ -308,5 +393,12 @@ th {
   .nav-link {
     white-space: nowrap;
   }
-}
 
+  .robot-page {
+    grid-template-rows: auto minmax(360px, 50vh) auto;
+  }
+
+  .joint-panel {
+    grid-template-columns: 1fr;
+  }
+}
